@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sanimia Inc.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-signin {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .form-signin h1 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .form-signin .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-signin .form-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-signin .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+        .form-signin .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-signin .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <form class="form-signin" id="login-form" method="POST" action="/loginSubmit">
+        <h1>Please log in</h1>
+        <div class="form-group">
+            <label for="login-email">Email address</label>
+            <input type="email" id="login-email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Log in">
+        </div>
+        <div class="footer">
+            <p>Don't have an account yet? <a href="/signup">Sign up</a></p>
+            <p>&copy; 2024 Sanimia Inc.</p>
+        </div>
+    </form>
+</body>
+</html>
